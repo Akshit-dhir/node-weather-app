@@ -1,4 +1,4 @@
-console.log("Client side Javascript file is loaded")
+
 // following is the code we are writing for the purpose of 
 // fetching the data on the client side 
 // for that we are using this client side javascript file 
