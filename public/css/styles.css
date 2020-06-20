@@ -1,0 +1,63 @@
+body{
+    color: #333333;
+    font-family:arial;
+    max-width:650px;
+    margin:0 auto;
+    padding: 0 16px;
+    display: flex; /*here we have added a flex variable which will help us */
+    flex-direction: column; /*colomn is basically used so that we can flex the body along the colomn */
+    min-height: 100vh /*I want to set minimum height of body to the browser's height*/
+}
+.main-content {
+   flex-grow: 1; /*this is to make main content take all left over space*/
+   /*main content is basically a div tag , when we run the above code
+   div tag will take the left over space and footer will be 
+   pushed to the bottom of the page*/
+}
+footer {
+/*
+background:blue;
+there will a blue background color set for this text 
+margin: 16px;
+margin is basically amount of with kept for within the box
+padding: 16px;
+padding is basically used for amount of gap you want to keep
+outside of the box
+*/
+ color : #888888; /*footer will be of grey color*/
+ border-top: 1px solid #eeeeee; /*footer will have a border at the top*/
+ margin-top:16px;/*margin is to allign footer within the box*/
+ padding : 16px;/*padding is basically used to give space outside of the box*/
+}
+header {
+    margin-top:16px;
+    margin-bottom:48px;
+}
+h1{
+    font-size : 64px;
+    margin-bottom: 16px;
+}
+header a {
+    color:#888888;
+    margin-right: 16px;
+    text-decoration: none;
+
+}
+/*
+The below code defines a class and will make the width of
+that content which include this class
+*/
+.portrait {
+    width:250px;
+}
+input {
+border: 1px solid #cccccc; /*for border*/
+padding: 8px; /*for the padding that is spacing*/
+}
+button {
+    cursor:pointer; /*for the hovering effect */
+    border: 1px solid #888888; /*for the border*/
+    background: #888888;/* for the background color*/
+    color: white;
+    padding: 8px;
+}

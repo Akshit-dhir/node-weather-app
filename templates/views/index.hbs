@@ -1,0 +1,37 @@
+<html>
+<head>
+    <!--<link rel="stylesheet" href="./css/styles.css">-->
+   <!--Up above rel defines the type of sheet we want to link
+   and href is for the link to that sheet.
+   href leaves us to the location of folder in which this 
+   file is present there on we add css/styles.css-->
+   <!--We can also give the absolute path which is the location of root of
+   app server assets path in our case its the package folder
+   -->
+   <!-- Giving the absolute path-->
+   <title>Weather</title>
+   <link rel="icon" href="/img/weather.png">
+   <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <!-- 
+    Instead of providing a static value we will provide a Dynamic value 
+    from the node.js as done below
+    -->
+    <div class="main-content">
+      {{>header}}
+      <form>
+        <input placeholder="Location">
+        <button>Search</button>
+      </form>
+      <p id="message-1"></p>
+      <p id="message-2"></p>
+    </div>
+    <!--
+    We have seperated our header from footer here so that we can 
+    push down our footer bit down and it is done using display type as flex    
+    -->
+    {{>footer}}
+    <script src="/js/app.js"></script>
+</body>
+</html>
