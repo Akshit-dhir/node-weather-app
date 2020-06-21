@@ -116,4 +116,4 @@ app.get('',(req,res)=>{
     })
     // WHne we deploy our app onto the heroku server we nned to specify which file 
     // we nned to specify which file need to be executed at the server /
-    // we will do it by setting the script property of package.json as src/app-final.js
+    // we will do it by setting the script property of package.json as "start": "node src/app.js" 
