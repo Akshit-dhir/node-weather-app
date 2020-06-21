@@ -3,7 +3,7 @@ const path = require('path')
 const express =require('express')
 const app = express()
 // below code is to fetch the dynamic port provided by heroku
-// to us , fetched through process , followed by the environment variablee which 
+// to us , fetched through process , followed by the environment variable which 
 // will have our port inside PORT
 const port = process.env.PORT || 3000
 const geocode = require('./utils/geocode')
@@ -52,7 +52,7 @@ app.get('',(req,res)=>{
                             error: error
                         })
                     }
-                    forecast(latitude,longitude,(error,{Weather_type,temperature,feelslike}={})=>
+                    forecast(latitude,longitude,(error,{Weather_type,temperature,feelslike,humidity}={})=>
                     {
                         if(error)
                         {
@@ -61,7 +61,7 @@ app.get('',(req,res)=>{
                             })
                         }
                         res.send({
-                            Forcastdata : Weather_type +" outside.There is temperature of "+temperature+" feels like "+feelslike,
+                            Forcastdata : Weather_type +" outside.There is temperature of "+temperature+" feels like "+feelslike+ ". \n" + "There is humidity of "+humidity+".",
                             location,
                             address
                         })

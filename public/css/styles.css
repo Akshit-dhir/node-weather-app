@@ -14,6 +14,9 @@ body{
    div tag will take the left over space and footer will be 
    pushed to the bottom of the page*/
 }
+#message-1{
+    white-space: pre-line;
+}
 footer {
 /*
 background:blue;
