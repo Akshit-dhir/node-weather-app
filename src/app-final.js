@@ -2,6 +2,10 @@ const hbs = require('hbs')
 const path = require('path')
 const express =require('express')
 const app = express()
+// below code is to fetch the dynamic port provided by heroku
+// to us , fetched through process , followed by the environment variablee which 
+// will have our port inside PORT
+const port = process.env.PORT || 3000
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 const publicDirectoryPath = path.join(__dirname,'../public')
@@ -111,9 +115,13 @@ app.get('',(req,res)=>{
     // the goal is to actually use the geocode and the forecast function down in this function 
     // to get the location name and send the actual weather of that location 
     
-    app.listen(3000, () => {
-        console.log('Server is up and running on port 3000')    
+    app.listen(port, () => {
+        console.log('Server is up and running on port '+ port)    
     })
+    // I the above code we were using lochost port 3000 for listening to our app now we can change it 
+    // since it will be hosted at the heroku server and heroku will provide us an 
+    // dynamic server where our app can be hosted 
     // WHne we deploy our app onto the heroku server we nned to specify which file 
     // we nned to specify which file need to be executed at the server /
     // we will do it by setting the script property of package.json as "start": "node src/app.js" 
+    // we can even start this app from our console using npm run start

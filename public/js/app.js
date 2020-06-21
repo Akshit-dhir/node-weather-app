@@ -35,7 +35,9 @@ weatherform.addEventListener('submit',(e) => {
     // client side 
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-    fetch('http://localhost:3000/weather?address='+address).then((response) => {
+    // the url in the fetch will not run when we deploy it on heroku server since its referring to the localhost
+    // we will just give the generic path
+    fetch('/weather?address='+address).then((response) => {
     // following code is another call back code which runs 
     // when json data has arrived and been parsed 
     response.json().then((data)=>{
