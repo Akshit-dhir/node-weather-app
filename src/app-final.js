@@ -114,3 +114,6 @@ app.get('',(req,res)=>{
     app.listen(3000, () => {
         console.log('Server is up and running on port 3000')    
     })
+    // WHne we deploy our app onto the heroku server we nned to specify which file 
+    // we nned to specify which file need to be executed at the server /
+    // we will do it by setting the script property of package.json as src/app-final.js
